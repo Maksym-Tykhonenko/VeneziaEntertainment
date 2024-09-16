@@ -387,7 +387,7 @@ function App() {
         useNativeDriver: true,
       }).start();
       //setLouderIsEnded(true);
-    }, 3500);
+    }, 1500);
   }, []);
 
   useEffect(() => {

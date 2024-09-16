@@ -5,31 +5,33 @@ import {
   Dimensions,
   ImageBackground,
   TouchableOpacity,
-} from 'react-native';
-import {ImageOnBg} from '../components/layout';
-import {VENICE_GOUP} from '../data/data';
-import {COLOR} from '../contstants/colors';
-import {ENTERTAINMENT} from '../data/data';
+  View,
+} from "react-native";
+import { ImageOnBg } from "../components/layout";
+import { VENICE_GOUP } from "../data/data";
+import { COLOR } from "../contstants/colors";
+import { ENTERTAINMENT } from "../data/data";
 
-const MainScreen = ({navigation}) => {
+const MainScreen = ({ navigation }) => {
   return (
     <ImageOnBg>
       <FlatList
         data={ENTERTAINMENT}
-        renderItem={({item}) => <Card item={item} navigation={navigation} />}
-        keyExtractor={item => item.id}
+        renderItem={({ item }) => <Card item={item} navigation={navigation} />}
+        keyExtractor={(item) => item.id}
         numColumns={2}
         contentContainerStyle={styles.grid}
       />
+      <View style={{ height: 100 }}></View>
     </ImageOnBg>
   );
 };
 
 export default MainScreen;
 
-const Card = ({item, navigation}) => {
+const Card = ({ item, navigation }) => {
   function eventCall() {
-    navigation.navigate('EventScreen', {
+    navigation.navigate("EventScreen", {
       item,
     });
   }
@@ -40,7 +42,7 @@ const Card = ({item, navigation}) => {
       activeOpacity={0.6}
       onPress={eventCall}>
       <ImageBackground
-        source={{uri: item.coverImage}}
+        source={{ uri: item.coverImage }}
         style={styles.image}></ImageBackground>
       <Text style={styles.text}>{item.type.toUpperCase()}</Text>
     </TouchableOpacity>
@@ -52,30 +54,30 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 10,
     borderRadius: 10,
-    overflow: 'hidden',
-    backgroundColor: 'transparent',
-    elevation: 2, 
-    shadowColor: COLOR.white, 
-    shadowOffset: {width: 0, height: 6},
+    overflow: "hidden",
+    backgroundColor: "transparent",
+    elevation: 2,
+    shadowColor: COLOR.white,
+    shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   image: {
-    width: Dimensions.get('window').width / 2 - 20, 
+    width: Dimensions.get("window").width / 2 - 20,
     height: 180,
-    resizeMode: 'cover',
+    resizeMode: "cover",
     padding: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   text: {
     marginTop: 8,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: COLOR.gold,
-    fontWeight: '800',
+    fontWeight: "800",
     fontSize: 22,
   },
   grid: {

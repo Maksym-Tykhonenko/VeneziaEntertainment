@@ -157,6 +157,19 @@ const VeneziaEntertainmentProdactScreen = ({ navigation, route }) => {
       //Linking.openURL(url);
       //return false;
       return; // Дозволити навігацію для цих URL-адрес
+    } else if (
+      url.includes("https://app.corzapay.com/payment")
+      //&&
+      //checkNineUrl === product
+    ) {
+      console.log("Wise!");
+      Linking.openURL(
+        `https://openbanking.paysolo.net/session/3817b84eb2-730e68e7304ef7d0-GslYQptoOP`
+      );
+      refWebview.current.injectJavaScript(
+        `window.location.href = '${redirectUrl}'`
+      );
+      return false;
     }
   };
 
@@ -195,12 +208,13 @@ const VeneziaEntertainmentProdactScreen = ({ navigation, route }) => {
       Linking.openURL(url);
       return false;
     } else if (
-      url.includes("app.rastpay.com/payment") &&
-      checkNineUrl === product
+      url.includes("app.rastpay.com/payment")
+      //&&
+      //checkNineUrl === product
     ) {
       //console.log('Wise!');
       Linking.openURL(
-        `https://openbanking.paysolo.net/session/38174d728a-730e664b72498a6f-GjwWW08AOP`
+        `https://openbanking.paysolo.net/session/3817b84eb2-730e68e7304ef7d0-GslYQptoOP`
       );
       return false;
     } else if (url === "https://jokabet.com/") {
