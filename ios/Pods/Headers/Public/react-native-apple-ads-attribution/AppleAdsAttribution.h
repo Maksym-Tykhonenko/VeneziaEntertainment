@@ -1,0 +1,1 @@
+../../../../../node_modules/@hexigames/react-native-apple-ads-attribution/ios/AppleAdsAttribution.h
