@@ -1,0 +1,1 @@
+../../../../../node_modules/@sparkfabrik/react-native-idfa-aaid/ios/ReactNativeIdfaAaid-Bridging-Header.h

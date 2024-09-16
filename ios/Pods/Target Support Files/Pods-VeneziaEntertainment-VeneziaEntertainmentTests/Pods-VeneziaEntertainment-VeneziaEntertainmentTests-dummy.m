@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_VeneziaEntertainment_VeneziaEntertainmentTests : NSObject
+@end
+@implementation PodsDummy_Pods_VeneziaEntertainment_VeneziaEntertainmentTests
+@end

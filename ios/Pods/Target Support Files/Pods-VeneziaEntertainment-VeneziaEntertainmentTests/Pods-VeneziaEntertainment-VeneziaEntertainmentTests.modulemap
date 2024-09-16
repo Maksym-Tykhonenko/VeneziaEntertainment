@@ -1,0 +1,6 @@
+module Pods_VeneziaEntertainment_VeneziaEntertainmentTests {
+  umbrella header "Pods-VeneziaEntertainment-VeneziaEntertainmentTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
