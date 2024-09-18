@@ -406,23 +406,23 @@ function App() {
             backgroundColor: "rgba(0,0,0)",
           }}>
           <Animated.Image
-            source={require("./assets/img/updates/Loader.png")} // Special animatable View
+            source={require("./assets/img/updates/Loader.png")}
             style={{
               //...props.style,
               opacity: appearingAnim,
               width: "100%",
               height: "100%",
-              position: "absolute", // Bind opacity to animated value
+              position: "absolute",
             }}
           />
           <Animated.Image
-            source={require("./assets/img/updates/Loader1.png")} // Special animatable View
+            source={require("./assets/img/updates/Loader1.png")}
             style={{
               //...props.style,
               opacity: appearingSecondAnim,
               width: "100%",
               height: "100%",
-              position: "absolute", // Bind opacity to animated value
+              position: "absolute",
             }}
           />
         </View>
